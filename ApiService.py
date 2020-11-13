@@ -27,14 +27,6 @@ def handleResponse(response):
 
 def sendRefereeDecision(competitionId, attemptLogId, refereeType, refereeDecision):
     requestBody = createRefereeDecisionRequestBody(competitionId, attemptLogId, refereeType, refereeDecision)
-
-    if refereeDecision == RefereeDecision.WHITE:
-        requestBody["valid"] = True
-        requestBody["notValidReason"] = None
-    else:
-        requestBody["valid"] = False
-        requestBody["notValidReason"] = refereeDecision.value
-
     response = requests.post("https://heavyplates.com/api/competition/{}/refereedecision".format(competitionId), requestBody)
     return handleResponse(response)
 
