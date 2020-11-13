@@ -7,12 +7,21 @@ class RefereeDecision(Enum):
     BLUE = auto()
     YELLOW = auto()
 
+class RefereeType(Enum):
+    Main = auto()
+    LEFT = auto()
+    RIGHT = auto()
 
 def login(username, password):
     pass
 
 def getCurrentAthlete(competitionId):
-    pass
+    response = requests.post("https://heavyplates.com/api/competition/{}/refereecurrentcompetitor".format(competitionId))
+    
+    if response.ok:
+        return response.json()
+    
+    raise Exception("Error Code {} occured with payload '{}'".format(response.status_code, response.text))
 
 def sendRefereeDecision(competitionId, attemptLogId, refereeType, refereeDecision):
     pass
