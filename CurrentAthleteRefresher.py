@@ -1,11 +1,10 @@
 from threading import Timer
-from ApiService import ApiService
 
 class CurrentAthleteRefresher:
     apiService = None
     pollingInterval = 5
 
-    def __init__(self, apiService: ApiService):
+    def __init__(self, apiService):
         self._startCurrentAthletePolling()
         self.apiService = apiService
 
