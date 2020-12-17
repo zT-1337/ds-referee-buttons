@@ -1,0 +1,23 @@
+{
+    "headJudgeRed": 8,
+    "headJudgeYellow": 10,
+    "headJudgeBlue": 12,
+    "headJudgeWhite": 16,
+    "headJudgeTimer": 18,
+
+    "leftJudgeRed": 22,
+    "leftJudgeYellow": 24,
+    "leftJudgeBlue": 26,
+    "leftJudgeWhite": 32,
+
+    "rightJudgeRed": 36,
+    "rightJudgeYellow": 38,
+    "rightJudgeBlue": 40,
+    "rightJudgeWhite": 37,
+
+    "username": "",
+    "password": "",
+    "competitionId": 1,
+
+    "pollingInterval": 5
+}
